@@ -7,6 +7,14 @@ export const SIZES = {
     Player:{
         WIDTH:48,
         HEIGHT:48
+    },
+    Kaban:{
+        WIDTH: 48,
+        HEIGHT:48
+    },
+    Muha:{
+        WIDTH: 48,
+        HEIGHT:48
     }
 }
 
@@ -16,5 +24,7 @@ export const LAYERS = {
 }
 
 export const SPRITES = {
-    PLAYER: 'Player'
+    PLAYER: 'Player',
+    KABAN: 'Kaban',
+    MUHA: 'Muha'
 }

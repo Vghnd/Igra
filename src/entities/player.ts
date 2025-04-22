@@ -4,7 +4,12 @@ export class Player extends Entity{
     textureKey: string;
     constructor(scene: Phaser.Scene, x: number, y: number,texture: string, type?: string){
         super(scene,x,y,texture,SPRITES.PLAYER)
-
+        this.setInteractive();
+        scene.matter.add.gameObject(this, {
+            shape: 'rectangle',  
+            width: 32,           
+            height: 32
+        });
 
         const anims = this.scene.anims;
         const animsFrameRate  = 9;
@@ -49,7 +54,7 @@ export class Player extends Entity{
     }
 
 update(delta: number) {
-    const keys = this.scene.input.keyboard.createCursorKeys();
+const keys = this.scene.input.keyboard.createCursorKeys();
 
     if(keys.up.isDown){
         this.play('up',true)
